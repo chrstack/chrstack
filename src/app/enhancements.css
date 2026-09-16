@@ -5,8 +5,9 @@
 .about-pillars span { display: block; color: var(--primary); font-size: 10px; letter-spacing: .16em; margin-bottom: 14px; }
 .about-pillars strong { display: block; font-size: 14px; }
 .about-pillars p { color: var(--muted); font-size: 12px; line-height: 1.5; margin: 7px 0 0; }
-.contact-email { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 12px; margin-top: 20px; font-size: clamp(18px, 2.4vw, 28px); font-weight: 650; letter-spacing: -.025em; border-bottom: 1px solid #3b5068; padding-bottom: 5px; }
-.contact-email:hover { color: var(--primary); }
+.contact-email-wrap { position: relative; z-index: 2; display: flex; align-items: center; gap: 18px; margin-top: 28px; }
+.contact-email-wrap .button { width: max-content; }
+.contact-address { color: var(--muted); font-size: 14px; }
 .case-process { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding: 100px 0; border-bottom: 1px solid var(--border); }
 .case-process h2 { font-size: 34px; letter-spacing: -.04em; margin: 12px 0; }
 .case-process > div p { color: var(--muted); }
@@ -36,4 +37,4 @@ html[data-theme="light"] .hero-mark img { mix-blend-mode: multiply; }
 html[data-theme="light"] .project-automacao-sisreg .project-visual { background: radial-gradient(circle at 50% 50%, #c8f1e4 0%, #b7ddda 50%, #edf4fb 100%); }
 html[data-theme="light"] .project-analise-dados-dash-sgu .project-visual { background: radial-gradient(circle at 50% 50%, #eadcff 0%, #d8c8e8 50%, #edf4fb 100%); }
 @media (max-width: 900px) { .github-link + .theme-toggle { margin-left: auto; } .about-pillars { grid-template-columns: 1fr; } .case-process { grid-template-columns: 1fr; gap: 30px; } }
-@media (max-width: 600px) { .theme-toggle { width: 36px; height: 36px; } .contact-email { font-size: 17px; } .case-process { padding: 70px 0; } }
+@media (max-width: 600px) { .theme-toggle { width: 36px; height: 36px; } .contact-email-wrap { align-items: flex-start; flex-direction: column; } .contact-email-wrap .button { width: 100%; } .case-process { padding: 70px 0; } }
