@@ -1,0 +1,3 @@
+export function SectionHeading({ number, title, intro }: { number: string; title: string; intro?: string }) {
+  return <div className="section-heading"><span>{number}</span><div><h2>{title}</h2>{intro && <p>{intro}</p>}</div></div>;
+}

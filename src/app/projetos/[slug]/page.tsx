@@ -1,0 +1,22 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
+import { getProject, projects } from "@/data/projects";
+
+export function generateStaticParams() { return projects.map(({ slug }) => ({ slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const project = getProject((await params).slug); if (!project) return {};
+  return { title: project.name, description: project.shortDescription };
+}
+
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const project = getProject((await params).slug); if (!project) notFound();
+  return <main id="conteudo" className="project-page"><div className="container">
+    <Link href="/projetos" className="back-link"><ArrowLeft size={17}/> Todos os projetos</Link>
+    <header className="project-hero"><div><div className="project-meta"><span>{project.index}</span><span className="status"><i/>{project.status}</span></div><p className="eyebrow">{project.eyebrow}</p><h1>{project.name}</h1><p>{project.description}</p><div className="project-actions"><a className="button primary" href={project.url} target="_blank" rel="noreferrer">Acessar produto <ArrowUpRight size={18}/></a>{project.github && <a className="button secondary" href={project.github} target="_blank" rel="noreferrer">Ver no GitHub <ArrowUpRight size={18}/></a>}</div></div><div className={`project-visual project-${project.slug}`} aria-hidden="true"><span className="project-monogram">{project.label}</span><span className="project-gridline"/></div></header>
+    <div className="case-grid"><section><span className="case-number">01</span><h2>O problema</h2><p>{project.problem}</p></section><section><span className="case-number">02</span><h2>A solução</h2><p>{project.solution}</p></section></div>
+    <section className="features"><div><span className="case-number">03</span><h2>O que o produto oferece</h2><p>Recursos centrais da experiência atual e da proposta do produto.</p></div><ul>{project.features.map((feature) => <li key={feature}><Check size={17}/>{feature}</li>)}</ul></section>
+    <section className="project-stack"><span className="case-number">04</span><h2>Tecnologias e base</h2><div className="tech-row">{project.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div></section>
+  </div></main>;
+}
