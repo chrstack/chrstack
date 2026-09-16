@@ -3,6 +3,7 @@
 import { Menu, X, Github } from "lucide-react";
 import { useState } from "react";
 import { BrandLogo } from "./brand-logo";
+import { ThemeToggle } from "./theme-toggle";
 
 const nav = [
   ["Início", "/#inicio"], ["Projetos", "/projetos"], ["Sobre", "/#sobre"],
@@ -19,6 +20,7 @@ export function Header() {
           {nav.map(([label, href]) => <a key={label} href={href}>{label}</a>)}
         </nav>
         <a className="github-link" href="https://github.com/chrstack" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
+        <ThemeToggle />
         <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Fechar menu" : "Abrir menu"}>
           {open ? <X /> : <Menu />}
         </button>
