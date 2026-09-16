@@ -2,6 +2,10 @@
 
 Site oficial de Christian Lima e hub dos produtos construídos sob a identidade **chrstack**.
 
+## Produção
+
+O site é publicado automaticamente na Vercel a partir da branch `main`.
+
 ## Tecnologias
 
 - Next.js (App Router)
