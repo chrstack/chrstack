@@ -7,7 +7,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 const nav = [
   ["Início", "/#inicio"], ["Projetos", "/projetos"], ["Sobre", "/#sobre"],
-  ["Stack", "/#stack"], ["Contato", "/#contato"],
+  ["Experiência", "/#experiencia"], ["Artigos", "/artigos"], ["Contato", "/#contato"],
 ] as const;
 
 export function Header() {
