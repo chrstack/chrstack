@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chrstack-chrstack.vercel.app"),
+  metadataBase: new URL("https://chrstack.vercel.app"),
   title: { default: "chrstack — Christian Lima | Desenvolvedor", template: "%s — chrstack" },
   description: "Projetos digitais, desenvolvimento web e tecnologia por Christian Lima.",
   openGraph: { title: "chrstack — Christian Lima | Desenvolvedor", description: "Projetos digitais, desenvolvimento web e tecnologia por Christian Lima.", type: "website", locale: "pt_BR", images: [{ url: "/og.png" }] },
