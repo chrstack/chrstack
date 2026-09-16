@@ -1,4 +1,5 @@
 export const socials = [
+  { label: "E-mail", href: "mailto:chrstack.dev@gmail.com" },
   { label: "Instagram", href: "https://www.instagram.com/chrstack" },
   { label: "GitHub", href: "https://github.com/chrstack" },
   { label: "LinkedIn", href: "https://br.linkedin.com/in/chrstack" },
