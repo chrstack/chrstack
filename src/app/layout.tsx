@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
+import "./enhancements.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -17,5 +18,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body className={inter.className}><a href="#conteudo" className="skip-link">Pular para o conteúdo</a><Header />{children}<Footer /><Analytics /></body></html>;
+  return <html lang="pt-BR" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('chrstack-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){}})()` }} /></head><body className={inter.className}><a href="#conteudo" className="skip-link">Pular para o conteúdo</a><Header />{children}<Footer /><Analytics /></body></html>;
 }
