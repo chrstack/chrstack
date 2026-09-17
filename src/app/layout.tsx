@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "Projetos digitais, desenvolvimento web e tecnologia por Christian Lima.",
   openGraph: { title: "chrstack — Christian Lima | Desenvolvedor", description: "Projetos digitais, desenvolvimento web e tecnologia por Christian Lima.", type: "website", locale: "pt_BR", images: [{ url: "/og.png" }] },
   twitter: { card: "summary_large_image", title: "chrstack — Christian Lima | Desenvolvedor", description: "Ideias que viram produtos.", images: ["/og.png"] },
-  icons: { icon: [{ url: "/brand/symbol.svg", type: "image/svg+xml" }, { url: "/brand/favicon.png", sizes: "64x64", type: "image/png" }], apple: "/brand/apple-touch-icon.png" },
+  icons: { icon: "/brand/favicon.png", apple: "/brand/symbol.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
