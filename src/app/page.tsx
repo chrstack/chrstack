@@ -11,7 +11,7 @@ import { ContactForm } from "@/components/contact-form";
 export default function Home() {
   return <main id="conteudo">
     <section className="hero" id="inicio"><div className="container hero-inner">
-      <div className="hero-copy"><p className="kicker"><span /> Desenvolvimento & produto digital</p><h1>Ideias que viram<br/><em>produtos.</em></h1><p className="hero-text">Desenvolvendo projetos digitais que transformam ideias em soluções reais.</p><div className="hero-actions"><Link href="/projetos" className="button primary">Ver projetos <ArrowDownRight size={18} /></Link><a href="https://github.com/chrstack" target="_blank" rel="noreferrer" className="button secondary">GitHub <ArrowUpRight size={18} /></a></div></div>
+      <div className="hero-copy"><p className="kicker"><span /> Christian Lima · Desenvolvedor</p><h1>Ideias que viram<br/><em>produtos.</em></h1><p className="hero-text">Produtos digitais, automações e experiências web construídos do problema ao deploy.</p><div className="hero-actions"><Link href="/projetos" className="button primary">Explorar projetos <ArrowDownRight size={18} /></Link><a href="https://github.com/chrstack" target="_blank" rel="noreferrer" className="button secondary">GitHub <ArrowUpRight size={18} /></a></div><div className="hero-proof"><span>Produto</span><span>Desenvolvimento</span><span>Dados</span></div></div>
       <div className="hero-mark" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><Image src="/brand/symbol.png" alt="" width={250} height={250} priority /></div>
       <div className="scroll-hint"><span>Explore</span><i /></div>
     </div></section>

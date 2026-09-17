@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
+import { ProjectVisual } from "./project-visual";
 
 export function ProjectCard({ project }: { project: Project }) {
   return <article className={`project-card project-${project.slug}`}>
-    <div className="project-visual" aria-hidden="true"><span className="project-monogram">{project.label}</span><span className="project-gridline" /></div>
+    <ProjectVisual project={project} />
     <div className="project-content">
       <div className="project-meta"><span>{project.index}</span><span className={`status status-${project.statusTone}`}><i />{project.status}</span></div>
       <p className="eyebrow">{project.eyebrow}</p>
