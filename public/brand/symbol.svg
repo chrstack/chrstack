@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Símbolo chrstack</title>
+  <defs>
+    <linearGradient id="chrstack-blue" x1="88" y1="72" x2="426" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#48A6FF"/>
+      <stop offset="0.48" stop-color="#237BFF"/>
+      <stop offset="1" stop-color="#0861F2"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#chrstack-blue)" d="M256 24 448 136v96l-80-48-112-64-112 64v80l112 64-64 40L64 296V136L256 24Z"/>
+  <path fill="url(#chrstack-blue)" d="m256 184 192 112v80L256 488 64 376l80-48 112 64 112-64-112-64-64-40 64-40Z"/>
+</svg>

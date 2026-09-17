@@ -12,7 +12,7 @@ export default function Home() {
   return <main id="conteudo">
     <section className="hero" id="inicio"><div className="container hero-inner">
       <div className="hero-copy"><p className="kicker"><span /> Christian Lima · Desenvolvedor</p><h1>Ideias que viram<br/><em>produtos.</em></h1><p className="hero-text">Produtos digitais, automações e experiências web construídos do problema ao deploy.</p><div className="hero-actions"><Link href="/projetos" className="button primary">Explorar projetos <ArrowDownRight size={18} /></Link><a href="https://github.com/chrstack" target="_blank" rel="noreferrer" className="button secondary">GitHub <ArrowUpRight size={18} /></a></div><div className="hero-proof"><span>Produto</span><span>Desenvolvimento</span><span>Dados</span></div></div>
-      <div className="hero-mark" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><Image src="/brand/symbol.png" alt="" width={250} height={250} priority /></div>
+      <div className="hero-mark" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><Image src="/brand/symbol.svg" alt="" width={250} height={250} priority /></div>
       <div className="scroll-hint"><span>Explore</span><i /></div>
     </div></section>
     <section className="section projects-section" id="projetos"><div className="container"><SectionHeading number="01" title="Projetos em destaque" intro="Produtos próprios e cases técnicos construídos a partir de problemas reais."/><div className="project-grid featured-project-grid">{featuredProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div><Link href="/projetos" className="all-projects">Ver todos os projetos <ArrowUpRight size={18}/></Link></div></section>
