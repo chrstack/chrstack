@@ -207,6 +207,7 @@ body:before { opacity: .09; background-size: 96px 96px; }
 .home-articles> a { min-height: 260px; border-radius: 12px; background: transparent; }
 .contact-card { border-radius: 16px; background: #0d141e; }
 .contact-card:after { opacity: .45; }
+.contact-links { flex-wrap: wrap; }
 
 html[data-theme="light"] .project-card { background: #fff; }
 html[data-theme="light"] .about-section { background: #eef4fb; }

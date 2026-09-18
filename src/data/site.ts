@@ -4,6 +4,7 @@ export const socials = [
   { label: "GitHub", href: "https://github.com/chrstack" },
   { label: "LinkedIn", href: "https://br.linkedin.com/in/chrstack" },
   { label: "TikTok", href: "https://www.tiktok.com/@chrstackk" },
+  { label: "Discord", href: "https://discord.gg/MEmTXpH8pA" },
 ] as const;
 
 export const technologies = [
