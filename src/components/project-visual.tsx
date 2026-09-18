@@ -16,6 +16,16 @@ export function ProjectVisual({ project }: { project: Project }) {
           <div className="settz-lines"><i/><i/><i/><b>Comparação inteligente</b></div>
         </div>
       )}
+      {project.slug === "chrstack-tickets" && (
+        <div className="tickets-preview">
+          <div className="tickets-sidebar"><b>CT</b><i/><i/><i/></div>
+          <div className="tickets-panel">
+            <div className="tickets-header"><span>Visão geral</span><small>Discord conectado</small></div>
+            <div className="tickets-metrics"><span><small>ABERTOS</small><b>12</b></span><span><small>ENCERRADOS</small><b>48</b></span><span><small>AVALIAÇÃO</small><b>4.9</b></span></div>
+            <div className="tickets-list"><i/><i/><i/></div>
+          </div>
+        </div>
+      )}
       {project.slug === "automacao-sisreg" && (
         <div className="automation-preview">
           <div><span>01</span><b>Pesquisar</b></div><i/><div><span>02</span><b>Comparar</b></div><i/><div><span>03</span><b>Validar</b></div>

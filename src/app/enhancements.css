@@ -174,6 +174,18 @@ body:before { opacity: .09; background-size: 96px 96px; }
 .settz-lines i:nth-child(2) { width: 82%; }.settz-lines i:nth-child(3) { width: 61%; }
 .settz-lines b { margin-top: 8px; color: #bfdbfe; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
 
+.tickets-preview { width: min(92%,440px); aspect-ratio: 1.72; display: grid; grid-template-columns: 58px 1fr; overflow: hidden; border: 1px solid rgba(96,165,250,.26); border-radius: 14px; background: #0a101a; box-shadow: 0 30px 70px rgba(0,0,0,.48); transform: perspective(800px) rotateY(-3deg); }
+.tickets-sidebar { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 17px 12px; border-right: 1px solid #1d2b3d; background: #0c1421; }
+.tickets-sidebar b { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 8px; background: #3b82f6; color: white; font-size: 9px; }
+.tickets-sidebar i { width: 23px; height: 5px; border-radius: 5px; background: #22334a; }
+.tickets-panel { padding: 18px; }
+.tickets-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+.tickets-header span { font-size: 11px; font-weight: 700; }.tickets-header small { color: #8da0b7; font-size: 7px; }
+.tickets-metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; }
+.tickets-metrics span { display: flex; flex-direction: column; padding: 10px; border: 1px solid #1c2d43; border-radius: 7px; background: #0d1827; }
+.tickets-metrics small { color: #6f849e; font-size: 6px; letter-spacing: .08em; }.tickets-metrics b { margin-top: 3px; color: #dbeafe; font-size: 14px; }
+.tickets-list { display: grid; gap: 7px; margin-top: 13px; }.tickets-list i { height: 8px; border-radius: 4px; background: linear-gradient(90deg,#203451 0 26%,#162337 26%); }.tickets-list i:nth-child(2){width:88%}.tickets-list i:nth-child(3){width:72%}
+
 .automation-preview { width: 92%; display: flex; align-items: center; justify-content: center; }
 .automation-preview>div { width: 92px; height: 92px; display: grid; place-content: center; gap: 5px; border: 1px solid rgba(96,165,250,.26); border-radius: 14px; background: rgba(11,23,38,.82); }
 .automation-preview>div span { color: #60a5fa; font-size: 9px; letter-spacing: .1em; }.automation-preview>div b { font-size: 10px; font-weight: 600; }

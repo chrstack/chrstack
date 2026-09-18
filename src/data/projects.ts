@@ -1,5 +1,5 @@
 export type Project = {
-  slug: "curriculo-pronto" | "settz" | "automacao-sisreg" | "analise-dados-dash-sgu";
+  slug: "curriculo-pronto" | "chrstack-tickets" | "settz" | "automacao-sisreg" | "analise-dados-dash-sgu";
   index: string;
   name: string;
   label: string;
@@ -42,8 +42,27 @@ export const projects: Project[] = [
     url: "https://curriculo-pronto.chrstack.chatgpt.site",
   },
   {
-    slug: "settz",
+    slug: "chrstack-tickets",
     index: "02",
+    name: "Chrstack Tickets",
+    label: "CT",
+    shortDescription: "Plataforma de atendimento para Discord com bot, dashboard, transcripts, avaliações e licenciamento.",
+    description: "Um sistema completo para centralizar e organizar o suporte em comunidades Discord, conectando bot, painel administrativo, autenticação, banco de dados e uma estrutura SaaS multi-servidor.",
+    status: "MVP funcional",
+    statusTone: "progress",
+    eyebrow: "Backend · Bot · SaaS",
+    problem: "Equipes de comunidades no Discord precisam organizar solicitações privadas, distribuir atendimentos, preservar o histórico e acompanhar a qualidade do suporte sem depender de processos manuais ou informações espalhadas.",
+    solution: "O Chrstack Tickets integra um bot Discord a um dashboard web. Cada servidor configura sua operação, abre tickets por setor, controla a equipe, gera transcripts e acompanha histórico, avaliações e indicadores em uma experiência centralizada.",
+    decisions: ["Separar os atendimentos por setor e gerar um protocolo automático para cada ticket", "Manter canais privados com permissões específicas para equipe e participantes", "Usar Discord OAuth2 para mostrar ao administrador somente servidores que ele pode gerenciar", "Projetar desde o MVP uma arquitetura multi-servidor com planos e licenças", "Preservar o histórico com transcripts HTML, registros de eventos e avaliações pós-atendimento"],
+    currentState: "MVP funcional com criação, gerenciamento e encerramento de tickets, transcripts, avaliações, dashboard, múltiplos servidores e licenciamento já operacionais.",
+    nextStep: "Implantar bot e dashboard em infraestrutura de produção 24/7 e evoluir o fluxo comercial com automação de pagamentos.",
+    impact: "Transforma o suporte do Discord em um fluxo rastreável, privado e mensurável, reunindo operação e gestão em uma única plataforma.",
+    features: ["Painéis de tickets por setor", "Protocolo e numeração automática", "Assumir e transferir atendimentos", "Controle de participantes e permissões", "Transcripts automáticos em HTML", "Avaliação de 1 a 5 estrelas", "Dashboard com histórico e estatísticas", "Login com Discord OAuth2", "Gerenciamento de múltiplos servidores", "Planos Free, Pro e Business", "Licenças com validade e limite de servidores"],
+    technologies: ["Python", "discord.py", "Flask", "SQLite", "Discord OAuth2", "HTML", "CSS"],
+  },
+  {
+    slug: "settz",
+    index: "05",
     name: "SETTZ",
     label: "S",
     shortDescription: "Pesquisa e contexto para ajudar você a avaliar melhor uma compra.",
@@ -102,8 +121,8 @@ export const projects: Project[] = [
   },
 ];
 
-const homeOrder: Project["slug"][] = ["curriculo-pronto", "automacao-sisreg", "analise-dados-dash-sgu"];
-const portfolioOrder: Project["slug"][] = [...homeOrder, "settz"];
+const homeOrder: Project["slug"][] = ["curriculo-pronto", "chrstack-tickets", "automacao-sisreg"];
+const portfolioOrder: Project["slug"][] = ["curriculo-pronto", "chrstack-tickets", "automacao-sisreg", "analise-dados-dash-sgu", "settz"];
 
 export const featuredProjects = homeOrder.map((slug) => projects.find((project) => project.slug === slug) as Project);
 export const portfolioProjects = portfolioOrder.map((slug) => projects.find((project) => project.slug === slug) as Project);
